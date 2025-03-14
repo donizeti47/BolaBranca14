@@ -17,3 +17,5 @@ ctrl + c - Para o servidor
 "nome da pasta" = Entra na pasta 
 
 ex. DB/conn.js = Entrei/selecionou a pasta DB e no arquivo conn.js
+
+teste
