@@ -1,7 +1,7 @@
 # BolaBranca14
 App para aprendizado simulando a garagem de uma empresa de ônibus 
 
- - O desafio é criar o sistema backend simulando uma Garagem 1 de uma empresa de ônibus 
+ - O desafio é criar o sistema backend simulando uma garagem de uma empresa de ônibus 
 
 ## Requisitos:
  - Desenvolver uma API RESTful que implemente as operações CRUD (Create, Read, Update, Delete).
