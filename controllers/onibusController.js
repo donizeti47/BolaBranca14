@@ -1,5 +1,5 @@
 // controllers/onibusController.js
-const Onibus = require('../models/Onibus');
+import onibusController from '../controllers/onibusController.js';
 
 // [POST] /onibus
 exports.criarOnibus = async (req, res) => {

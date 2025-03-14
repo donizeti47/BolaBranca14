@@ -1,24 +1,16 @@
-// routes/onibusRoutes.js
 import express from 'express';
-const router = express.Router();
-const onibusController = require('../controllers/onibusController');
+import onibusController from '../controllers/onibusController.js';
 
-router.post('/', onibusController.criarOnibus);
-router.get('/', onibusController.listarOnibus);
-router.get('/:id', onibusController.buscarOnibusPorId);
-router.put('/:id', onibusController.atualizarOnibus);
-router.delete('/:id', onibusController.excluirOnibus);
-router.get('/disponiveis', onibusController.listarOnibusDisponiveis);
-router.get('/linha', onibusController.listarOnibusEmLinha);
+const app = express();
 
-//module.exports = router;
+app.use(express.json());
 
+app.get('/onibus', onibusController.listarOnibus);
+app.get('/onibus/:id', onibusController.buscarOnibusPorId);
+app.post('/onibus', onibusController.criarOnibus);
+app.put('/onibus/:id', onibusController.atualizarOnibus);
+app.delete('/onibus/:id', onibusController.deletarOnibus);
 
-// routes/servicoRoutes.js
-// const express = require('express');
-//const router = express.Router();
-const servicoController = import('../controllers/servicoController');
-
-router.post('/', servicoController.criarServico);
-
-module.exports = router;
+app.listen(3000, 'localhost', () => {
+    console.log('Servidor rodando em http://localhost:3000');
+});
