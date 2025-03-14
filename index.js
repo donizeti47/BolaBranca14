@@ -1,5 +1,5 @@
 // routes/onibusRoutes.js
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 const onibusController = require('../controllers/onibusController');
 
@@ -15,9 +15,9 @@ router.get('/linha', onibusController.listarOnibusEmLinha);
 
 
 // routes/servicoRoutes.js
-const express = require('express');
-const router = express.Router();
-const servicoController = require('../controllers/servicoController');
+// const express = require('express');
+//const router = express.Router();
+const servicoController = import('../controllers/servicoController');
 
 router.post('/', servicoController.criarServico);
 
